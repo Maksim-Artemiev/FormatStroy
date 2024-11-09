@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: "Inter", sans-serif;
+    
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    padding: 0 5%;
+    z-index: 1000; /* Чтобы меню было выше других элементов */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.01));
+}
+
+header a {
+    color:  white;
+    font-size: 25pt;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+header a:hover{
+    color: #FFE388
+}
+
+.box {
+    
+    width: 100%;
+    height: 100vh;
+}
+
+.box1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png');
+    background-size: 100% 100%;
+}
+.black-box{
+    background-color: rgba(0, 0, 0, 0.25); 
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+}
+.box1 p{
+    font-size: 25pt;
+}
+.box1 h1{
+    font-size: 70pt;
+}
+.box1 button {
+    width: 322px;
+    height: 76px;
+    border: 0;
+    background-color: #25252C;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.5s ease;
+}
+
+.box1 button:hover {
+    color: #25252C;
+    background-color: white;
+}s
+
+button:active {
+    transform: scale(0.95); 
+    background-color: #1a1a1f; 
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.triangle-up {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 20px solid white;
+    transition: border-left-color 0.5s ease;
+}
+
+button:hover .triangle-up {
+    border-left: 20px solid #25252C;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.fade-in-1 {
+    animation-delay: 0.2s;
+}
+
+.fade-in-2 {
+    animation-delay: 0.4s;
+}
+
+.fade-in-3 {
+    animation-delay: 0.6s;
+}
+
+.fade-in-4 {
+    animation-delay: 0.8s;
+}
+
+/*--------------- Второй экран ----------------------*/
+.box2 {
+    width: 100%;
+    height: 100vh;
+    background-color: #1E262F;
+    display: flex;
+}
+
+.box2 p{
+    font-size: 25pt;
+}
+.zg1{
+    width: 800px; 
+    height: 242px; 
+    margin: 5% 20%;  
+    text-align: justify; 
+    text-indent: 24px; 
+    line-height: 1.5;
+}
+.box2 h1{
+    font-size: 32pt;
+}
+.box2 button {
+    width: 322px;
+    height: 76px;
+    border: 0;
+    background-color: #25252C;
+    border-radius: 40px;
+    color: white;
+    transition: all 0.5s ease;
+}
+.box2 button{
+    background-color: #1E262F;
+}
+
+.box2 button:hover{
+    color: white;
+}
+
+.green{
+    width: 400px; 
+    height: 100%; 
+    border-left: 1px solid rgba(255, 255, 255, 0.2); 
+    border-right: 1px solid rgba(255, 255, 255, 0.2); 
+    margin-left: 10%; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    font-size: 20pt
+}
+.phote{
+    width: 358px; 
+    height: 356px; 
+    border: solid 1px white; 
+    position: absolute; 
+    margin: 5% 40%;
+}
+.zg2{
+    margin: 20% 5%; 
+    width: 550px; 
+    height: 250px; 
+    position: absolute;  
+    line-height: 1.5; 
+    font-size: 25pt;
+}
+.zg3{
+    position: absolute; 
+    margin: 35% 30%; 
+    width: 320px; 
+    height: 60px;
+}
+ul{
+    margin: 25% 5%;
+}
+.active-button {
+    width: 300px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15%;
+    font-size: 25pt;
+}
+
+.video{
+    width: 600px; height: 300px; border: solid 1px white; margin-left: 20%"
+}
+
+.inactive-button {
+    width: 130px;
+    height: 45px;
+    font-size: 14px;
+}
+.hidden {
+    display: none; /* Скрываем текст */
+}
+
+.visible {
+    display: block; /* Показываем текст */
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Плавная анимация появления */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+.text1{
+    width: 100%;
+    height: 100px;
+    border: solid 1px white;
+}
+.text-block {
+    width: 100%;
+    font-size: 18pt;
+    margin-top: 20px;
+    color: white;
+}
+
+/*--------------- Третий экран -------------------------*/
+
+.box3{
+    width: 100%;
+    height: 100vh;
+}
+
+.box3 h1{
+    font-size: 40pt;
+}
+.zg4{
+    width: 550px; 
+    height: 600px;  
+    display: grid; 
+    grid-template-columns: 2fr 3fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    font-size: 20pt;
+}
+
+/*--------------- Четвёртый экран ----------------------*/
+.box4{
+    width: 100%;
+    height: 100vh;
+}
+.p-box4-1{
+    font-size: 70pt; 
+    margin: 5% 10%;
+}
+
+.p-box4-2{
+    font-size: 48pt; 
+    margin-left: 10%;
+}
+.p-box4-3{
+    font-size: 24pt;
+     margin-left: 10%;
+}
+.home{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    transition: all 0.5s ease;
+}
+.cotege{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    transition: all 0.5s ease;
+}
+.goss{
+    width: 100px;
+    height: 100px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 50px;
+    background-color: #ffffff;
+    transition: all 0.5s ease;
+}
+
+.btn-text{
+    width: 100%;
+    height: 75%;
+
+}
+.active-btn {
+  background-color: black;
+}
+.active-text{
+    font-weight: bold;
+    color: black;
+}
+
+.slider {
+    position: relative;
+    width: 620px;
+    height: 450px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    width: 620px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.btn-slider{
+    width: 50px;
+    height: 50px;
+    border: 0;
+    background-color: #25252C;
+
+    border-radius: 40px;
+    color: white;
+   
+}
+
+/*--------------- Пятый экран ----------------------*/
+.box5{
+    width: 100%;
+    height: 100vh;
+}
+
+/*----------------------Шестой экран--------------------*/
+
+.boxOrder{
+    width: 100%;
+    height: 130vh;
+    background-image: url(../image/boxOrder.png);
+    background-size: 100% 100%;
+    color: white;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0.01);
+    padding: 40px;
+    border-radius: 10px;
+    width: 600px;
+    text-align: center;
+    position: absolute;
+    margin: 30% 33%;
+}
+
+.custom-form label {
+    color: #ffffff;
+    font-size: 14pt;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.custom-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    color: #ffffff;
+    font-size: 12pt;
+    outline: none;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.custom-form input:focus {
+    border-bottom: 1px solid #ffffff;
+    transform: scale(1.02); /* Лёгкое увеличение поля при фокусе */
+}
+
+.custom-form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+}
+
+.custom-form input:focus::placeholder {
+    color: rgba(255, 255, 255, 0.4); /* Бледный placeholder при фокусе */
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16pt;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    margin-left: 200px;
+}
+
+.submit-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.privacy-text {
+    font-size: 10pt;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+.privacy-text a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: underline;
+}
+
+
+/* ----------------------- 1200 Пикселей ------------------------*/
+
+@media (max-width: 1200px){
+    /*--------------- Первый экран ----------------------*/
+    .box1 h1{
+        font-size: 50pt;
+    }
+    .box1 p{
+        font-size: 20pt;
+    }
+
+    .box1 h1{
+        font-size: 60pt;
+    }
+    header a{
+        font-size: 20pt;
+    }
+    .box1{
+        height: 90vh;
+        width: 120%;
+    }
+    .black-box{
+        height: 90%;
+        width: 120%;
+    }
+/*--------------- Второй экран ----------------------*/
+    .box2{
+        height: 90vh;
+        width: 120%;
+    }
+
+    .box2 p{
+        font-size: 17pt;
+    }
+    .box2 h1{
+        font-size: 27pt;
+    }
+
+    .video{
+        width: 300px;
+        height: 200px;
+        margin-left: 10%;
+    }
+    .zg1{
+        width: 600px; 
+        height: 242px; 
+        margin: 5% 10%;  
+
+        text-indent: 24px; 
+
+    }
+    .green{
+        width: 300px; 
+        height: 100%; 
+        
+        margin-left: 5%; 
+       
+        font-size: 17pt
+    }
+    .phote{
+        width: 200px; 
+        height: 200px; 
+
+        margin: 5% 40%;
+    }
+    .zg2{
+        margin: 20% 5%; 
+        width: 400px; 
+        height: 250px; 
+    
+ 
+        font-size: 17pt;
+    }
+    .zg3{
+
+        margin: 35% 30%; 
+        width: 320px; 
+        height: 60px;
+        font-size: 12pt;
+    }
+/*--------------- Третий экран ----------------------*/
+    .box3{
+        height: 90vh;
+        width: 120%;
+    }
+    ul{
+        margin: 20% 5%;
+    }
+
+    .box3 h1{
+        font-size: 25pt;
+    }
+    .img-box3{
+        width: 400px;
+        height: 500px;
+    }
+    .box3 p{
+        font-size: 20pt;
+    }
+
+    .zg4{
+        width: 450px; 
+        height: 500px;  
+      
+        font-size: 17pt;
+    }
+    /*--------------- Четвёртый экран ----------------------*/
+    .box4{
+        height: 90vh;
+        width: 120%;
+    }
+
+    .p-box4-1{
+        font-size: 50pt; 
+        margin: 5% 10%;
+    }
+    
+    .p-box4-2{
+        font-size: 30pt; 
+        margin-left: 10%;
+    }
+    .p-box4-3{
+        font-size: 20pt;
+         margin-left: 10%;
+    }
+
+    /*--------------- Пятый экран ----------------------*/
+    .box5{
+        height: 90vh;
+        width: 120%;
+    }
+}
+
+/* ----------------------- 1000 Пикселей ------------------------*/
+
+@media (max-width: 1000px){
+    /*--------------- Первый экран ----------------------*/
+    .box1 h1{
+        font-size: 50pt;
+    }
+    .box1 p{
+        font-size: 20pt;
+    }
+
+    .box1 h1{
+        font-size: 60pt;
+    }
+    header a{
+        font-size: 20pt;
+    }
+    .box1{
+        width: 120%;
+        height: 90vh;
+    }
+    .black-box{
+        height: 90%;
+    }
+/*--------------- Второй экран ----------------------*/
+    .box2{
+        height: 90vh;
+    }
+
+    .box2 p{
+        font-size: 17pt;
+    }
+    .box2 h1{
+        font-size: 27pt;
+    }
+
+    .video{
+        width: 300px;
+        height: 200px;
+        margin-left: 10%;
+    }
+    .zg1{
+        width: 600px; 
+        height: 242px; 
+        margin: 5% 10%;  
+
+        text-indent: 24px; 
+
+    }
+    .green{
+        width: 300px; 
+        height: 100%; 
+        
+        margin-left: 5%; 
+       
+        font-size: 17pt
+    }
+    .phote{
+        width: 200px; 
+        height: 200px; 
+
+        margin: 5% 40%;
+    }
+    .zg2{
+        margin: 20% 5%; 
+        width: 400px; 
+        height: 250px; 
+    
+ 
+        font-size: 17pt;
+    }
+    .zg3{
+
+        margin: 35% 30%; 
+        width: 320px; 
+        height: 60px;
+        font-size: 12pt;
+    }
+/*--------------- Третий экран ----------------------*/
+    .box3{
+        height: 90vh;
+    }
+    ul{
+        margin: 20% 5%;
+    }
+
+    .box3 h1{
+        font-size: 25pt;
+    }
+    .img-box3{
+        width: 400px;
+        height: 500px;
+    }
+    .box3 p{
+        font-size: 20pt;
+    }
+
+    .zg4{
+        width: 450px; 
+        height: 500px;  
+      
+        font-size: 17pt;
+    }
+    /*--------------- Четвёртый экран ----------------------*/
+    .box4{
+        height: 90vh;
+    }
+
+    .p-box4-1{
+        font-size: 50pt; 
+        margin: 5% 10%;
+    }
+    
+    .p-box4-2{
+        font-size: 30pt; 
+        margin-left: 10%;
+    }
+    .p-box4-3{
+        font-size: 20pt;
+         margin-left: 10%;
+    }
+
+    /*--------------- Пятый экран ----------------------*/
+    .box5{
+        height: 90vh;
+    }
+}
