@@ -15,10 +15,10 @@
 <body>
     <div class="content">
         <header>
-            <div style="width: 30%; height: 100px; display: flex; align-items: center; ">
+            <div class="logo">
                 <a href="#section1" style="margin-left: 5%;">Формат-строй</a>
             </div>
-            <div style="width: 60%; height: 100px; display: flex; justify-content: space-around; align-items: center;">
+            <div class="menu">
                 <a href="#section2">О компании</a>
                 <a href="#section3">Проекты</a>
                 <a href="#section4">Услуги</a>
@@ -54,7 +54,7 @@
             </div>
             <div>
                 <div id="text1" class="text-block hidden">
-                   <div style="margin-top: 150px; display: flex;">
+                   <div class="zg0">
                     <div style=" margin-left: 5%"><h1 >Компания <br> Формат строй</h1></div>
                     <div class="video"></div>
                    </div>
@@ -73,12 +73,12 @@
 
                     </div>
                     <div class="zg3">
-                        <p style="font-size: 20pt;">Волков Михаил Юрьевич</p>
+                        <p class="Misha">Волков Михаил Юрьевич</p>
                         <p style="text-align: right;">Директор компании</p>
                     </div>
                 </div>
                 <div id="text3" class="text-block hidden">
-                    <div style="width: 600px; height: 300px; border: solid 1px white; margin: 10% 5%;">
+                    <div class="phote2">
 
                     </div>
                     <div>
@@ -101,15 +101,15 @@
           <div style="display: grid; grid-template-columns: 1fr 1fr; height: 80%;">
             <div style="height: 100%; display: flex; justify-content: center; align-items: center;">
                 <div class="zg4">
-                    <div><img src="../image/pr4 1.png" alt=""></div>
+                    <div><img src="../image/pr4 1.png" alt="" class="miniLogo"></div>
                        <div><p>Индивидуальный проект</p></div>
-                    <div><img src="../image/Bill-Icon-PNG-Transparent-Image 1.png" alt=""></div>
+                    <div><img src="../image/Bill-Icon-PNG-Transparent-Image 1.png" alt="" class="miniLogo"></div>
                        <div><p>Фиксированная стоимость строительства</p></div>
-                    <div><img src="../image/exterior2 1.png" alt=""></div>
+                    <div><img src="../image/exterior2 1.png" alt="" class="miniLogo"></div>
                        <div><p>Комплектация домов с коммуникациями</p></div>
-                    <div><img src="../image/img_449631 1.png" alt=""></div>
+                    <div><img src="../image/img_449631 1.png" alt="" class="miniLogo"></div>
                        <div><p>Государственные программы</p></div>
-                    <div><img src="../image/check-mark-symbol-on-transparent-background-free-png 1.png" alt=""></div>
+                    <div><img src="../image/check-mark-symbol-on-transparent-background-free-png 1.png" alt="" class="miniLogo"></div>
                        <div><p>Гарантия на дом 5 лет, на кровлю 7 лет</p></div>
                 </div>
             </div>
@@ -124,15 +124,15 @@
           <div class="box4">
             <div class="test" style="width: 100%; display: flex; justify-content: center; margin-top: 3%; font-size: 20pt; color: #A09F9F;">
                 <div>
-                    <button id="Home" class="home" onclick="showButton('btnText1', this)"><img src="../image/Group 8816.png" alt=""></button>
+                    <button id="Home" class="home" onclick="showButton('btnText1', this)"><img src="../image/Group 8816.png" alt="" class="home-img"></button>
                     <p id="btn-home" style="text-align: center; ">Дома</p>
                 </div>
                 <div>
-                    <button id="cotege" class="cotege" onclick="showButton('btnText2', this)"><img src="../image/Vector.png" alt=""></button>
+                    <button id="cotege" class="cotege" onclick="showButton('btnText2', this)"><img src="../image/Vector.png" alt="" class="home-img"></button>
                     <p id="btn-cotege" style="text-align: center; ">Коттеджи</p>
                 </div>
                 <div>
-                    <button id="bani" class="goss" onclick="showButton('btnText3', this)"><img src="../image/text_file_icon_149856.png" alt="" width="50px" height="50px"></button>
+                    <button id="bani" class="goss" onclick="showButton('btnText3', this)"><img src="../image/text_file_icon_149856.png" alt="" width="50px" height="50px" class="home-img"></button>
                     <p id="btn-goss" style="text-align: center;">Гос. заказы</p>
                 </div>
             </div>
@@ -146,9 +146,9 @@
                 <button class="btn-slider" onclick="changeSlide('slider1', -1)">&#10094;</button>
                 <div id="slider1" class="slider">
                     <div class="slides">
-                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 1">
-                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 2">
-                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 3">
+                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 1" >
+                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 2" >
+                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 3" >
                     </div>
                 </div>  
                 <button class="btn-slider" onclick="changeSlide('slider1', 1)">&#10095;</button>
@@ -203,18 +203,18 @@
         </section>
         <section id="section6">
             <div class="boxOrder">
-            <h1 style=" position: absolute; margin: 10% 25%;  width: 900px;">Заказать индивидуальный проект</h1>
-            <div style="width: 600px; height: 90px; display: flex; justify-content: space-around; position: absolute; margin: 20% 33%;">
+            <h1 class="form-zg">Заказать индивидуальный проект</h1>
+            <div class="sotsSeti">
                 <div>
-                    <a href=""><img src="../image/Telegram.png" alt="" width="70px" height="70px"></a>
+                    <a href=""><img src="../image/Telegram.png" alt="" class="telegram" ></a>
                 <p style="text-align: center;">Telegram</p>
                 </div>
                 <div>
-                    <a href=""><img src="../image/Viber.png" alt="" width="70px" height="70px"></a>
+                    <a href=""><img src="../image/Viber.png" alt="" class="telegram" ></a>
                     <p style="text-align: center;">Viber</p>
                 </div>
                 <div>
-                    <a href=""><img src="../image/WhatsApp.png" alt="" width="70px" height="70px"></a>
+                    <a href=""><img src="../image/WhatsApp.png" alt="" class="telegram" ></a>
                     <p style="text-align: center;">What's App</p>
                 </div>
                 
