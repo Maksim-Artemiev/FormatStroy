@@ -12,16 +12,16 @@ body {
 }
 
 header {
-    position: fixed;
+   
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
-    
+    position: absolute;
     align-items: center;
     padding: 0 5%;
     z-index: 1000; /* Чтобы меню было выше других элементов */
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(255, 255, 255, 0.01));
+   
 }
 .menu{
     width: 60%; 
@@ -397,7 +397,7 @@ ul{
 }
 .form-zg{
     position: absolute; 
-    margin: 10% 25%; 
+    margin: 10% 32%; 
      width: 900px;
 }
 .form-container {
@@ -490,6 +490,55 @@ ul{
 }
 .sotsSeti p{
     font-size: 15pt;
+}
+.response-message{
+    display: none; 
+    position: absolute;
+    width: 400px;
+     height: 400px; 
+
+     margin: 40% 38%;
+     font-size: 25pt;
+     text-align: center;
+}
+#checkmark-container {
+    position: relative;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 180px;
+    margin-top: 30px;
+}
+
+#checkmark {
+    width: 50px;
+    height: 50px;
+}
+
+.checkmark-circle {
+    stroke-dasharray: 157; /* Perimeter of the circle */
+    stroke-dashoffset: 157; /* Initially hidden */
+    animation: circleDraw 1s ease forwards;
+}
+
+.checkmark-path {
+    stroke-dasharray: 48; /* Length of the checkmark path */
+    stroke-dashoffset: 48; /* Initially hidden */
+    animation: checkmarkDraw 1s 1s ease forwards; /* Delay to match circle drawing */
+}
+
+@keyframes circleDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes checkmarkDraw {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 /* ----------------------- 1280 Пикселей ------------------------*/
 
