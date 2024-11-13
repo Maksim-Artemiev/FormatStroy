@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -219,6 +220,15 @@
                 </div>
                 
             </div>
+            <div id="response-message" class="response-message" >
+                Ваша заявка успешно отарвылена, мы свяжемся с вами в ближайщее время
+                <div id="checkmark-container">
+                    <svg id="checkmark" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" stroke="#4CAF50" stroke-width="2" />
+                        <path class="checkmark-path" fill="none" stroke="#4CAF50" stroke-width="2" d="M 14 26 L 22 34 L 38 18" />
+                    </svg>
+                </div>
+            </div>
             <div class="form-container" id="form-section">
                 <form class="custom-form" name="submit-to-google-sheet">
                     <label for="name">Имя</label>
@@ -242,16 +252,15 @@
                     </p>
                 </form>
             
-                <div id="response-message" style="display: none;"></div> <!-- Сообщение об успешной отправке -->
+                <!-- Сообщение об успешной отправке -->
             
                 <script>
                     // Проверяем наличие ключа в localStorage и скрываем форму, если он установлен
-        if (localStorage.getItem("formSubmitted")) {
-            document.getElementById("form-section").style.display = "none";
-        }
-
-       
-
+                    if (localStorage.getItem("formSubmitted")) {
+                        document.getElementById("form-section").style.display = "none";
+                        document.getElementById("response-message").style.display = "block";
+                    }
+                
                     const scriptURL = 'https://script.google.com/macros/s/AKfycbwEWDB0V74RnXNae6JMWOnOk7QyYid1F2c30JJFQicP8D8y0IQFZaYO5Gmww5zADexH/exec';
                     const form = document.forms['submit-to-google-sheet'];
                     const submitButton = document.getElementById('submit-button');
@@ -261,7 +270,8 @@
                         e.preventDefault();
                 
                         // Деактивируем кнопку отправки, чтобы предотвратить повторные клики
-                       
+                        submitButton.disabled = true;
+                        submitButton.innerText = "Отправка...";
                 
                         fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                             .then(response => response.json())  // Преобразуем ответ в JSON
@@ -269,29 +279,19 @@
                                 // Показать сообщение об успешной отправке
                                 if (responseMessage) {
                                     responseMessage.style.display = 'block';
-                                    responseMessage.style.color = data.result === 'success' ? 'green' : 'red';
-                                    responseMessage.innerText = data.message;  // Сообщение от скрипта
+                                   
                                 }
                                 
                                 // Очистка формы
                                 form.reset();
-
+                
+                                // Устанавливаем флаг в localStorage
                                 localStorage.setItem("formSubmitted", "true");
-
-                                setTimeout(() => {
-                        responseMessage.style.display = 'none';
-                        document.getElementById("form-section").style.display = "none"; // Скрываем форму
-                    }, 5000);
-            
+                
+                          
+                                    document.getElementById("form-section").style.display = "none";
                                
-            
-                                // Скрытие сообщения через 5 секунд
-                                setTimeout(() => {
-                                    responseMessage.style.display = 'none';
-                                }, 5000); // 5 секунд задержки перед скрытием
                             })
-
-                            
                             .catch(error => {
                                 console.error('Error!', error.message);
                                 if (responseMessage) {
