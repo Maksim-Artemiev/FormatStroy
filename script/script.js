@@ -84,3 +84,7 @@ function changeSlide(sliderId, direction) {
     slider.querySelector('.slides').style.transform = `translateX(${offset}px)`;
 }
 
+
+ 
+
+
