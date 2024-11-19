@@ -21,9 +21,9 @@
             </div>
             <div class="menu">
                 <a href="#section2">О компании</a>
-                <a href="#section3">Проекты</a>
+                <a href="#section3">Галерея</a>
                 <a href="#section4">Услуги</a>
-                <a href="#section5">Контакты</a>
+                <a href="#section7">Контакты</a>
             </div>
         </header> 
         <section id="section1">
@@ -147,9 +147,9 @@
                 <button class="btn-slider" onclick="changeSlide('slider1', -1)">&#10094;</button>
                 <div id="slider1" class="slider">
                     <div class="slides">
-                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 1" >
-                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 2" >
-                        <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 3" >
+                        <img src="../image/yslygi1.png" alt="Фото 1" >
+                        <img src="../image/yslygi1.png" alt="Фото 2" >
+                        <img src="../image/yslygi1.png" alt="Фото 3" >
                     </div>
                 </div>  
                 <button class="btn-slider" onclick="changeSlide('slider1', 1)">&#10095;</button>
@@ -165,9 +165,9 @@
                     <button class="btn-slider" onclick="changeSlide('slider2', -1)">&#10094;</button>
                     <div id="slider2" class="slider">
                         <div class="slides">
-                            <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 1">
-                            <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 2">
-                            <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 3">
+                            <img src="../image/yslygi2.png" alt="Фото 1">
+                            <img src="../image/yslygi2.png" alt="Фото 2">
+                            <img src="../image/yslygi2.png" alt="Фото 3">
                         </div>
                     </div>  
                     <button class="btn-slider" onclick="changeSlide('slider2', 1)">&#10095;</button>
@@ -176,16 +176,16 @@
             <div id="btnText3" class="btn-text hidden">
                 <div style="float: left; width: 50%; height: 100%; ">
                     <p class="p-box4-1">Гос. заказы</p>
-                    <p class="p-box4-3"></p>
-                    <p class="p-box4-3"></p>
+                    <p class="p-box4-3">Гос.заказ - это тот вид работ который требует большой ответственности и внимания!</p>
+                    <p class="p-box4-3">Наша компания может предоставить эти качества во всех смыслах!</p>
                   </div>
                   <div style="float: right; width: 50%; height: 100%; display: flex; align-items: center;">
                     <button class="btn-slider" onclick="changeSlide('slider3', -1)">&#10094;</button>
                     <div id="slider3" class="slider">
                         <div class="slides">
-                            <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 1">
-                            <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 2">
-                            <img src="../image/home_buying-675024491-5a90878ec5542e00376cc5aa 1.png" alt="Фото 3">
+                            <img src="../image/yslygi3.png" alt="Фото 1">
+                            <img src="../image/yslygi3.png" alt="Фото 2">
+                            <img src="../image/yslygi3.png" alt="Фото 3">
                         </div>
                     </div>  
                     <button class="btn-slider" onclick="changeSlide('slider3', 1)">&#10095;</button>
@@ -195,10 +195,31 @@
         </section>
         
         <section id="section3">
-          <div class="box5" style="display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr;">
-            <div style="border: solid 1px black"></div>
-            <div style="border: solid 1px black"></div>
-            <div style="border: solid 1px black"></div>
+          <div class="box5" >
+            <div class="gallery-home">
+                <a href="gallery-home.html">
+                    <div style="background-color: rgb(0, 0, 0, 0.25); width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-decoration: none; ">
+                    <h1 >Дома</h1>
+                    
+                </div>
+                </a>
+            </div>
+            <div class="gallery-cottege">
+                <a href="gallery-cottege.html">
+                    <div style="background-color: rgb(0, 0, 0, 0.25); width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-decoration: none; ">
+                    <h1 >
+                        Коттеджи
+                    </h1>
+                </div>
+                </a>
+            </div>
+            <div class="gallery-gos">
+                <a href="gallery-gos.html">
+                    <div style="background-color: rgb(0, 0, 0, 0.25); width: 100%; height: 100%;  display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-decoration: none; ">
+                    <h1 >Гос. Заказы</h1>
+                </div>
+                </a>
+            </div>
             
         </div>  
         </section>
@@ -232,10 +253,12 @@
             <div class="form-container" id="form-section">
                 <form class="custom-form" name="submit-to-google-sheet">
                     <label for="name">Имя</label>
-                    <input type="text" autocomplete="name" id="name" name="name" required>
-            
+                    <input type="text" autocomplete="name" id="name" name="name" required 
+                           maxlength="30" pattern="^[А-Яа-яЁё\s]+$" title="Только русские буквы и пробелы">
+                
                     <label for="surName">Фамилия</label>
-                    <input type="text" id="surName" name="surName" required>
+                    <input type="text" id="surName" name="surName" required 
+                           maxlength="30" pattern="^[А-Яа-яЁё\s]+$" title="Только русские буквы и пробелы">
                 
                     <label for="phone">Телефон</label>
                     <input type="tel" id="phone" autocomplete="tel" name="phone" required placeholder="+7 (___) __-__">
@@ -254,61 +277,90 @@
             
                 <!-- Сообщение об успешной отправке -->
             
-                <script>
-                    // Проверяем наличие ключа в localStorage и скрываем форму, если он установлен
-                    if (localStorage.getItem("formSubmitted")) {
-                        document.getElementById("form-section").style.display = "none";
-                        document.getElementById("response-message").style.display = "block";
-                    }
-                
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbwEWDB0V74RnXNae6JMWOnOk7QyYid1F2c30JJFQicP8D8y0IQFZaYO5Gmww5zADexH/exec';
-                    const form = document.forms['submit-to-google-sheet'];
-                    const submitButton = document.getElementById('submit-button');
-                    const responseMessage = document.getElementById('response-message');
-                
-                    form.addEventListener('submit', e => {
-                        e.preventDefault();
-                
-                        // Деактивируем кнопку отправки, чтобы предотвратить повторные клики
-                        submitButton.disabled = true;
-                        submitButton.innerText = "Отправка...";
-                
-                        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                            .then(response => response.json())  // Преобразуем ответ в JSON
-                            .then(data => {
-                                // Показать сообщение об успешной отправке
-                                if (responseMessage) {
-                                    responseMessage.style.display = 'block';
-                                   
-                                }
-                                
-                                // Очистка формы
-                                form.reset();
-                
-                                // Устанавливаем флаг в localStorage
-                                localStorage.setItem("formSubmitted", "true");
-                
-                          
-                                    document.getElementById("form-section").style.display = "none";
-                               
-                            })
-                            .catch(error => {
-                                console.error('Error!', error.message);
-                                if (responseMessage) {
-                                    responseMessage.style.display = 'block';
-                                    responseMessage.style.color = 'red';
-                                    responseMessage.innerText = 'Произошла ошибка при отправке данных.';
-                                }
-                                // Включаем кнопку снова в случае ошибки
-                                submitButton.disabled = false;
-                                submitButton.innerText = "Заказать";
-                            });
-                    });
+                <script >
+                    let myArray = [];
+
+// Загружаем JSON-файл
+fetch('script/obscene_words.json')
+    .then(response => response.json()) // Парсим содержимое файла как JSON
+    .then(data => {
+        myArray = data; // Присваиваем содержимое массива
+    })
+    .catch(error => console.error('Ошибка загрузки JSON:', error));
+
+// Функция для проверки наличия запрещенных слов
+function containsForbiddenWords(fieldValue) {
+    return myArray.some(word => fieldValue.toLowerCase().includes(word.toLowerCase()));
+}
+
+// Обработчик отправки формы
+const form = document.forms['submit-to-google-sheet'];
+const submitButton = document.getElementById('submit-button');
+const responseMessage = document.getElementById('response-message');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    // Проверяем каждое поле на наличие запрещенных слов
+    const name = form['name'].value;
+    const surName = form['surName'].value;
+    const phone = form['phone'].value;
+    const email = form['email'].value;
+
+    if (containsForbiddenWords(name) || containsForbiddenWords(surName) || containsForbiddenWords(phone) || containsForbiddenWords(email)) {
+        alert("Форма содержит неподобающие слова. Пожалуйста, исправьте это.");
+        return; // Если в одном из полей есть запрещенные слова, форма не отправляется
+    }
+
+    // Деактивируем кнопку отправки, чтобы предотвратить повторные клики
+    submitButton.disabled = true;
+    submitButton.innerText = "Отправка...";
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwEWDB0V74RnXNae6JMWOnOk7QyYid1F2c30JJFQicP8D8y0IQFZaYO5Gmww5zADexH/exec';
+
+    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => response.json())  // Преобразуем ответ в JSON
+        .then(data => {
+            if (responseMessage) {
+                responseMessage.style.display = 'block';
+            }
+
+            form.reset(); // Очистка формы
+            localStorage.setItem("formSubmitted", "true");
+            document.getElementById("form-section").style.display = "none";
+        })
+        .catch(error => {
+            console.error('Error!', error.message);
+            if (responseMessage) {
+                responseMessage.style.display = 'block';
+                responseMessage.style.color = 'red';
+                responseMessage.innerText = 'Произошла ошибка при отправке данных.';
+            }
+            // Включаем кнопку снова в случае ошибки
+            submitButton.disabled = false;
+            submitButton.innerText = "Заказать";
+        });
+});
                 </script>
+
             </div>
         </section>
         
     </div>
+    <section id="section7">
+        <footer>
+        <p>
+            +7 (951) 756-18-08<br>
++7 (921) 503-80-36<br>
++7 (953) 238-78-78<br>
+        </p>
+        <p>
+            OOO "Формат-строй" ©
+        </p>
+        <p></p>
+    </footer>
+    </section>
+    
     <script src="../script/script.js"></script>
     <script src="../script/imasked.js"></script>
 </body>
