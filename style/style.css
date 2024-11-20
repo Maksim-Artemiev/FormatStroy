@@ -650,6 +650,172 @@ footer{
 
 
 
+/* ----------------------- 1366 Пикселей ------------------------*/
+
+@media (max-width: 1366px){
+    /*--------------- Первый экран ----------------------*/
+    .box1 h1{
+        font-size: 50pt;
+    }
+    .box1 p{
+        font-size: 20pt;
+    }
+
+    .box1 h1{
+        font-size: 60pt;
+    }
+    header a{
+        font-size: 20pt;
+    }
+    .box1{
+        height: 90vh;
+        width: 100%;
+    }
+    .black-box{
+        height: 90%;
+        width: 100%;
+    }
+/*--------------- Второй экран ----------------------*/
+    .box2{
+        height: 90vh;
+        width: 100%;
+    }
+
+    .box2 p{
+        font-size: 17pt;
+    }
+    .box2 h1{
+        font-size: 24pt;
+    }
+    .zg0{
+        margin-top: 50px; 
+        display: flex;
+    }
+
+    .video{
+        width: 300px;
+        height: 200px;
+        margin-left: 10%;
+    }
+    .zg1{
+        width: 600px; 
+        height: 242px; 
+        margin: 5% 10%;  
+
+        text-indent: 24px; 
+
+    }
+    .green{
+        width: 300px; 
+        height: 100%; 
+        
+        margin-left: 5%; 
+       
+        font-size: 15pt
+    }
+    .phote{
+        width: 200px; 
+        height: 200px; 
+
+        margin: 5% 40%;
+    }
+    .zg2{
+        margin: 20% 5%; 
+        width: 400px; 
+        height: 250px; 
+    
+ 
+        font-size: 17pt;
+    }
+    .zg3{
+
+        margin: 35% 30%; 
+        width: 320px; 
+        height: 60px;
+        font-size: 12pt;
+    }
+    .phote2{
+        width: 500px; 
+        height: 250px; 
+        border: solid 1px white; 
+        margin: 10% 5%;
+    }
+    ul{
+        font-size: 15pt;
+    }
+    
+/*--------------- Третий экран ----------------------*/
+    .box3{
+        height: 90vh;
+        width: 100%;
+    }
+    ul{
+        margin: 20% 5%;
+    }
+
+    .box3 h1{
+        font-size: 25pt;
+    }
+    .img-box3{
+        width: 400px;
+        height: 500px;
+    }
+    .box3 p{
+        font-size: 20pt;
+    }
+
+    .zg4{
+        width: 450px; 
+        height: 500px;  
+      
+        font-size: 17pt;
+    }
+    /*--------------- Четвёртый экран ----------------------*/
+    .box4{
+        height: 90vh;
+        width: 100%;
+    }
+
+    .p-box4-1{
+        font-size: 50pt; 
+        margin: 5% 10%;
+    }
+    
+    .p-box4-2{
+        font-size: 30pt; 
+        margin-left: 10%;
+    }
+    .p-box4-3{
+        font-size: 20pt;
+         margin-left: 10%;
+    }
+
+    /*--------------- Пятый экран ----------------------*/
+    .box5{
+        height: 90vh;
+        width: 100%;
+    }
+    .gallery-home{
+      
+        background-size: 550px 900px;
+      
+      
+    }
+    
+    .gallery-cottege{
+     
+        background-size: 550px 900px;
+    }
+    
+    .gallery-gos{
+      
+        background-size: 550px 900px;
+    }
+}
+
+
+
+
 /* ----------------------- 1280 Пикселей ------------------------*/
 
 @media (max-width: 1280px){
@@ -734,6 +900,15 @@ footer{
         height: 60px;
         font-size: 12pt;
     }
+    .phote2{
+        width: 500px; 
+        height: 250px; 
+        border: solid 1px white; 
+        margin: 10% 5%;
+    }
+    ul{
+        font-size: 15pt;
+    }
     
 /*--------------- Третий экран ----------------------*/
     .box3{
@@ -785,6 +960,22 @@ footer{
     .box5{
         height: 90vh;
         width: 1280px;
+    }
+     .gallery-home{
+      
+        background-size: 550px 900px;
+      
+      
+    }
+    
+    .gallery-cottege{
+     
+        background-size: 550px 900px;
+    }
+    
+    .gallery-gos{
+      
+        background-size: 550px 900px;
     }
 }
 
@@ -1281,7 +1472,28 @@ footer{
     /*--------------- Пятый экран ----------------------*/
     .box5{
         width: 480px;
-        height: 320px;
+        height: 420px;
+    }
+    .box5 h1 {
+        font-size: 20pt; /* Начальный размер */
+        transition: all 0.5s ease; /* Плавное изменение размера */
+        transform: scale(1); /* Начальный масштаб */
+    }
+    .gallery-home{
+      
+        background-size: 200px 500px;
+      
+      
+    }
+    
+    .gallery-cottege{
+     
+        background-size: 200px 500px;
+    }
+    
+    .gallery-gos{
+      
+        background-size: 200px 500px;
     }
 
     /*---------------- Шестой экран --------------------*/
@@ -1355,6 +1567,9 @@ footer{
     }
     .privacy-text{
         margin-top: 60px;
+    }
+    footer{
+        width: 480px;
     }
 }
 
