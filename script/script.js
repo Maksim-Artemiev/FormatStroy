@@ -64,6 +64,20 @@ if (textId === 'btnText1') {
 }
 
 
+window.onload = function() {
+    // Для блока с кнопками "О компании", "Руководство", "Почему мы?"
+    document.getElementById('btn1').classList.add('active-button');
+    document.getElementById('text1').classList.remove('hidden');
+    document.getElementById('text1').classList.add('visible');
+
+    // Для блока с кнопками "Дома", "Коттеджи", "Гос. заказы"
+    document.getElementById('Home').classList.add('active-btn');
+    document.getElementById('btnText1').classList.remove('hidden');
+    document.getElementById('btnText1').classList.add('visible');
+
+    // Устанавливаем цвет текста для параграфа "Дома"
+    document.getElementById('btn-home').classList.add('active-text');
+};
 // Слайдер
 let currentSlides = { slider1: 0, slider2: 0, slider3: 0};
 
