@@ -676,7 +676,7 @@ footer{
         width: 100%;
     }
     .black-box{
-        height: 90%;
+        height: 100%;
         width: 100%;
     }
 /*--------------- Второй экран ----------------------*/
@@ -814,6 +814,9 @@ footer{
     .gallery-gos{
       
         background-size: 550px 900px;
+    }
+    .boxOrder{
+        height: 150vh;
     }
 }
 
