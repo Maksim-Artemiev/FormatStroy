@@ -672,7 +672,7 @@ footer{
         font-size: 20pt;
     }
     .box1{
-        height: 90vh;
+        height: 110vh;
         width: 100%;
     }
     .black-box{
@@ -681,7 +681,7 @@ footer{
     }
 /*--------------- Второй экран ----------------------*/
     .box2{
-        height: 90vh;
+        height: 110vh;
         width: 100%;
     }
 
@@ -750,7 +750,7 @@ footer{
     
 /*--------------- Третий экран ----------------------*/
     .box3{
-        height: 90vh;
+        height: 110vh;
         width: 100%;
     }
     ul{
@@ -776,7 +776,7 @@ footer{
     }
     /*--------------- Четвёртый экран ----------------------*/
     .box4{
-        height: 90vh;
+        height: 110vh;
         width: 100%;
     }
 
@@ -796,7 +796,7 @@ footer{
 
     /*--------------- Пятый экран ----------------------*/
     .box5{
-        height: 90vh;
+        height: 110vh;
         width: 100%;
     }
     .gallery-home{
