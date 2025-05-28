@@ -48,8 +48,8 @@
             <div class="green">
                 
                 <button id="btn1" onclick="showText('text1', this)">О компании</button>
-    <button id="btn2" onclick="showText('text2', this)">Руководство</button>
-    <button id="btn3" onclick="showText('text3', this)">Почему мы?</button>
+                <button id="btn2" onclick="showText('text2', this)">Руководство</button>
+                <button id="btn3" onclick="showText('text3', this)">Почему мы?</button>
 
             
             </div>
@@ -57,12 +57,14 @@
                 <div id="text1" class="text-block hidden">
                    <div class="zg0">
                     <div style=" margin-left: 5%"><h1 >Компания <br> Формат строй</h1></div>
-                    <div class="video">
-                        
+                    <div class="video">  
                     </div>
                    </div>
-                   
-                   <div class="zg1"><p style="margin-top: 10%; ">Это современная строительная компания, специализирующаяся на комплексном решении задач в области строительства. <p>Мы гордимся своим опытом, высоким качеством работы и индивидуальным подходом к каждому проекту.</p>
+                   <div class="zg1"><p style="margin-top: 10%; ">
+                    Это современная строительная компания, 
+                    специализирующаяся на комплексном решении задач в области строительства. <p>
+                    Мы гордимся своим опытом, высоким качеством работы 
+                    и индивидуальным подходом к каждому проекту.</p>
                     </p></div>
 
                    
@@ -263,7 +265,7 @@
                            maxlength="30" pattern="^[А-Яа-яЁё\s]+$" title="Только русские буквы и пробелы">
                 
                     <label for="phone">Телефон</label>
-                    <input type="tel" id="phone" autocomplete="tel" name="phone" required placeholder="+7 (___) __-__">
+                    <input type="tel" id="phone" autocomplete="tel" name="phone" required placeholder="+7 (___) __-__" pattern="\+7 \(\d{3}\) \d{3}-\d{2}-\d{2}" title="Введите номер в формате: +7 (XXX) XX-XX">
                 
                     <label for="email">Электронная почта (не обязательно)</label>
                     <input type="email" id="email" name="email" autocomplete="email">
@@ -279,18 +281,30 @@
             
                 <!-- Сообщение об успешной отправке -->
             
-                <script >
-                    let myArray = [];
+                <script>
+let myArray = [];
 
-// Загружаем JSON-файл
+// Загружаем JSON-файл с запрещёнными словами
 fetch('script/obscene_words.json')
-    .then(response => response.json()) // Парсим содержимое файла как JSON
+    .then(response => response.json())
     .then(data => {
-        myArray = data; // Присваиваем содержимое массива
+        myArray = data;
     })
     .catch(error => console.error('Ошибка загрузки JSON:', error));
 
-// Функция для проверки наличия запрещенных слов
+// Проверка localStorage при загрузке страницы
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem("formSubmitted") === "true") {
+        const responseMessage = document.getElementById("response-message");
+        const formSection = document.getElementById("form-section");
+        if (responseMessage && formSection) {
+            responseMessage.style.display = "block";
+            formSection.style.display = "none";
+        }
+    }
+});
+
+// Функция для проверки наличия запрещённых слов
 function containsForbiddenWords(fieldValue) {
     return myArray.some(word => fieldValue.toLowerCase().includes(word.toLowerCase()));
 }
@@ -303,47 +317,52 @@ const responseMessage = document.getElementById('response-message');
 form.addEventListener('submit', e => {
     e.preventDefault();
 
-    // Проверяем каждое поле на наличие запрещенных слов
     const name = form['name'].value;
     const surName = form['surName'].value;
     const phone = form['phone'].value;
     const email = form['email'].value;
 
-    if (containsForbiddenWords(name) || containsForbiddenWords(surName) || containsForbiddenWords(phone) || containsForbiddenWords(email)) {
+    // Проверка на запрещённые слова
+    if (
+        containsForbiddenWords(name) ||
+        containsForbiddenWords(surName) ||
+        containsForbiddenWords(phone) ||
+        containsForbiddenWords(email)
+    ) {
         alert("Форма содержит неподобающие слова. Пожалуйста, исправьте это.");
-        return; // Если в одном из полей есть запрещенные слова, форма не отправляется
+        return;
     }
 
-    // Деактивируем кнопку отправки, чтобы предотвратить повторные клики
+    // Блокировка кнопки
     submitButton.disabled = true;
     submitButton.innerText = "Отправка...";
 
     const scriptURL = 'https://script.google.com/macros/s/AKfycbwEWDB0V74RnXNae6JMWOnOk7QyYid1F2c30JJFQicP8D8y0IQFZaYO5Gmww5zADexH/exec';
 
     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => response.json())  // Преобразуем ответ в JSON
+        .then(response => response.json())
         .then(data => {
-            if (responseMessage) {
-                responseMessage.style.display = 'block';
-            }
-
-            form.reset(); // Очистка формы
+            // Сохраняем флаг в localStorage
             localStorage.setItem("formSubmitted", "true");
+
+            // Показываем сообщение, скрываем форму
+            if (responseMessage) responseMessage.style.display = "block";
+            if (form) form.reset();
             document.getElementById("form-section").style.display = "none";
         })
         .catch(error => {
-            console.error('Error!', error.message);
+            console.error('Ошибка отправки!', error.message);
             if (responseMessage) {
-                responseMessage.style.display = 'block';
-                responseMessage.style.color = 'red';
-                responseMessage.innerText = 'Произошла ошибка при отправке данных.';
+                responseMessage.style.display = "block";
+                responseMessage.style.color = "red";
+                responseMessage.innerText = "Произошла ошибка при отправке данных.";
             }
-            // Включаем кнопку снова в случае ошибки
+            // Включаем кнопку снова
             submitButton.disabled = false;
             submitButton.innerText = "Заказать";
         });
 });
-                </script>
+</script>
 
             </div>
         </section>
